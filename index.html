@@ -6,7 +6,7 @@
 <meta name="theme-color" content="#080808">
 <link rel="manifest" href="manifest.json">
 <link rel="apple-touch-icon" href="icon-192.png">
-<title>Meu Treino V4.1</title>
+<title>Meu Treino V4.3</title>
 <style>
 :root{--bg:#080808;--card:#151515;--card2:#1e1e1e;--line:#303030;--text:#f4f4f4;--muted:#999;--yellow:#ffd400;--yellow2:#b99b00;--good:#80d29b;--bad:#ff7474}
 *{box-sizing:border-box} body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-tap-highlight-color:transparent}
@@ -18,15 +18,15 @@ h2{font-size:18px;margin:0 0 7px}h3{font-size:15px;margin:0 0 5px}.muted{font-si
 .row{display:flex;justify-content:space-between;align-items:center;gap:10px}.wrap{flex-wrap:wrap}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .action{border:1px solid #393939;background:#1c1c1c;color:#eee;padding:10px 12px;border-radius:12px;min-height:43px}.action.primary{background:var(--yellow);border-color:var(--yellow);color:#080808;font-weight:900}.action.danger{border-color:#673535;color:#ff9a9a}.action.small{padding:7px 9px;min-height:36px;font-size:12px}.action.ghost{background:transparent}
 .pill{font-size:11px;border:1px solid #3a3a3a;border-radius:99px;padding:5px 8px;color:#bdbdbd;white-space:nowrap}.pill.y{background:#312a00;border-color:#635400;color:#ffe66c}
-.metric{font-size:29px;font-weight:950;color:var(--yellow)}.metric-sm{font-size:20px;font-weight:900}.progress{height:8px;background:#2b2b2b;border-radius:99px;overflow:hidden;margin-top:8px}.bar{height:100%;background:var(--yellow)}
-.bottom{position:fixed;z-index:50;bottom:0;left:0;right:0;background:rgba(10,10,10,.98);border-top:1px solid #2a2a2a;padding:7px 4px calc(7px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:0}.bottom button{border:0;background:transparent;color:#919191;padding:6px 8px;font-size:10px;min-width:58px}.bottom .ico{display:block;font-size:18px;color:var(--yellow);margin-bottom:2px}
+.metric{font-size:29px;font-weight:950;color:var(--yellow)}.home-plan{font-size:clamp(24px,6vw,36px);line-height:1.08}.metric-sm{font-size:20px;font-weight:900}.progress{height:8px;background:#2b2b2b;border-radius:99px;overflow:hidden;margin-top:8px}.bar{height:100%;background:var(--yellow)}
+.bottom{position:fixed;z-index:50;bottom:0;left:0;right:0;background:rgba(10,10,10,.98);border-top:1px solid #2a2a2a;padding:7px 4px calc(7px + env(safe-area-inset-bottom));display:flex;justify-content:center;gap:0}.bottom button{border:0;background:transparent;color:#919191;padding:6px 8px;font-size:10px;min-width:58px}.bottom button.active{color:#fff}.bottom button.active .ico{color:var(--yellow)}.bottom .ico{display:block;font-size:18px;color:var(--yellow);margin-bottom:2px}
 .tabs{display:flex;gap:7px;overflow:auto;margin:10px 0 12px}.tab{border:1px solid #353535;background:#1c1c1c;color:#ddd;border-radius:12px;padding:9px 11px;white-space:nowrap}.tab.active{background:var(--yellow);border-color:var(--yellow);color:#080808;font-weight:900}
 .weekstrip{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;margin-top:10px}.wday{background:#1e1e1e;border:1px solid #2c2c2c;border-radius:11px;text-align:center;padding:7px 2px}.wday.today{border-color:var(--yellow)}.wday.done{background:#312a00}
 .activity{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;background:#1d1d1d;border-radius:13px;padding:11px;margin:8px 0}.check{width:32px;height:32px;border-radius:9px;border:1px solid #555;background:#101010;color:#101010;font-weight:900}.check.done{background:var(--yellow);border-color:var(--yellow);color:#080808}
 .fields{display:grid;grid-template-columns:1fr 1fr;gap:8px}label{font-size:12px;color:#999;display:block}input,textarea,select{width:100%;border:1px solid #3a3a3a;background:#0f0f0f;color:white;border-radius:11px;padding:10px;margin-top:4px}textarea{min-height:70px;resize:vertical}
 .exercise-top{display:grid;grid-template-columns:1fr auto;gap:10px}.machine-art{width:76px;min-height:62px;border:1px solid #3a3a3a;border-radius:12px;background:#101010;display:flex;align-items:center;justify-content:center;color:var(--yellow);font-weight:900;font-size:10px;text-align:center;padding:5px}
 .sets{display:flex;gap:7px;flex-wrap:wrap;margin:11px 0}.set{width:40px;height:40px;border-radius:50%;border:1px solid #484848;background:#202020;color:#eee;font-weight:900}.set.done{background:var(--yellow);border-color:var(--yellow);color:#080808}.set.skip{background:#3b2525;border-color:#714040;color:#ffb0b0}
-.altbox{background:#242000;border:1px solid #5c4e00;border-radius:11px;padding:9px;margin-top:8px;font-size:13px}.historyline{font-size:12px;color:#aaa;margin-top:7px}
+.altbox{background:#242000;border:1px solid #5c4e00;border-radius:11px;padding:9px;margin-top:8px;font-size:13px}.historyline{font-size:12px;color:#aaa;margin-top:7px}.exercise-actions{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.exercise-actions .action{white-space:normal}
 .timer-float{position:fixed;right:14px;bottom:92px;z-index:45;background:var(--yellow);color:#080808;border-radius:16px;padding:10px 12px;font-weight:900;box-shadow:0 8px 30px #0008;display:none}.timer-float.show{display:block}
 .calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:5px}.calname{font-size:10px;color:#777;text-align:center}.cell{min-height:76px;background:#171717;border:1px solid #292929;border-radius:10px;padding:6px;font-size:12px}.cell.today{border-color:var(--yellow)}.cell.selected{outline:2px solid var(--yellow)}.dots{display:flex;gap:3px;flex-wrap:wrap;margin-top:5px}.dot{width:7px;height:7px;border-radius:50%;background:#555}.dot.m{background:var(--yellow)}.dot.r{background:#bbb}.dot.t{background:#777}.planmark{font-size:9px;color:#7b7b7b;margin-top:3px}
 .chartbox{background:#0f0f0f;border:1px solid #292929;border-radius:14px;padding:10px;margin-top:8px;overflow:hidden}.chart{width:100%;height:190px;display:block}.chart text{fill:#7e7e7e;font-size:9px}.chart .line{fill:none;stroke:var(--yellow);stroke-width:3}.chart .goal{stroke:#555;stroke-dasharray:5 5}.chart .point{fill:var(--yellow)}.bars{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;align-items:end;height:150px;margin-top:8px}.barcol{display:flex;flex-direction:column;justify-content:end;gap:3px;height:100%;text-align:center}.barseg{border-radius:5px 5px 2px 2px;min-height:2px}.barseg.m{background:var(--yellow)}.barseg.t{background:#888}.barseg.r{background:#c7c7c7}.barlabel{font-size:9px;color:#777}
@@ -34,7 +34,35 @@ h2{font-size:18px;margin:0 0 7px}h3{font-size:15px;margin:0 0 5px}.muted{font-si
 .editrow{display:grid;grid-template-columns:1fr auto;gap:9px;align-items:center;padding:9px 0;border-bottom:1px solid #292929}.dragbtns{display:flex;gap:4px}.schedrow{display:grid;grid-template-columns:80px 1fr;gap:8px;align-items:center;margin:7px 0}.checktype{display:grid;grid-template-columns:1fr auto;gap:8px;margin:6px 0}
 .modal{position:fixed;inset:0;background:#000c;z-index:90;display:none;align-items:flex-end;justify-content:center}.modal.show{display:flex}.sheet{width:min(900px,100%);max-height:90vh;overflow:auto;background:#161616;border:1px solid #353535;border-radius:22px 22px 0 0;padding:15px 15px calc(18px + env(safe-area-inset-bottom))}
 .notice{font-size:12px;color:#8d8d8d;line-height:1.45}.divider{border-top:1px solid #292929;margin:12px 0}
-@media(max-width:650px){.bottom button{font-size:9px;min-width:52px;padding-left:5px;padding-right:5px}.grid4,.statgrid{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.machine-art{width:66px}.cell{min-height:67px}.schedrow{grid-template-columns:65px 1fr}}
+@media(max-width:650px){.exercise-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+.bottom{padding-left:2px;padding-right:2px}
+.bottom button{font-size:9px;min-width:0;flex:1;padding:6px 2px}
+.bottom .ico{font-size:17px}
+.metric{font-size:25px}
+.metric-sm{font-size:18px}
+.card{border-radius:16px;padding:13px}
+.hero .metric{line-height:1.08}
+.weekstrip{gap:4px}
+.wday{padding:6px 1px}
+.machine-art{width:58px;min-height:54px;font-size:9px}
+.exercise-top{grid-template-columns:minmax(0,1fr) 58px}
+.action.small{font-size:11px;padding:7px 8px}
+.row.wrap{gap:6px}
+.fields{grid-template-columns:1fr 1fr}
+.measure-grid{grid-template-columns:1fr!important}
+.measure-grid input{min-height:48px}
+.calendar{gap:4px}
+.cell{min-height:62px;padding:5px}
+.planmark{font-size:10px;line-height:1.15}
+}
+@media(max-width:390px){
+.bottom button{font-size:8px}
+.bottom .ico{font-size:16px}
+.fields{grid-template-columns:1fr}
+.grid3{grid-template-columns:1fr 1fr}
+.weekstrip{gap:3px}
+.card{padding:12px}
+}.grid4,.statgrid{grid-template-columns:1fr 1fr}.grid3{grid-template-columns:1fr 1fr}.machine-art{width:66px}.cell{min-height:67px}.schedrow{grid-template-columns:65px 1fr}}
 </style>
 </head>
 <body>
@@ -42,12 +70,12 @@ h2{font-size:18px;margin:0 0 7px}h3{font-size:15px;margin:0 0 5px}.muted{font-si
 <main id="view"></main>
 <div id="timerFloat" class="timer-float" onclick="openTimer()"></div>
 <nav class="bottom">
-<button onclick="showToday()"><span class="ico">⌂</span>Hoje</button>
-<button onclick="showWorkout()"><span class="ico">✓</span>Treino</button>
-<button onclick="showCalendar()"><span class="ico">▦</span>Calendário</button>
-<button onclick="showProgress()"><span class="ico">↘</span>Evolução</button>
-<button onclick="showEdit()"><span class="ico">✎</span>Editar</button>
-<button onclick="showDashboard()"><span class="ico">▥</span>Dash</button>
+<button data-nav="today" onclick="showToday()"><span class="ico">⌂</span>Hoje</button>
+<button data-nav="workout" onclick="showWorkout()"><span class="ico">✓</span>Treino</button>
+<button data-nav="calendar" onclick="showCalendar()"><span class="ico">□</span>Calendário</button>
+<button data-nav="progress" onclick="showProgress()"><span class="ico">↘</span>Evolução</button>
+<button data-nav="edit" onclick="showEdit()"><span class="ico">✎</span>Editar</button>
+<button data-nav="dash" onclick="showDashboard()"><span class="ico">▤</span>Dash</button>
 </nav>
 <div id="modal" class="modal" onclick="if(event.target===this)closeModal()"><div id="sheet" class="sheet"></div></div>
 
@@ -81,6 +109,12 @@ let state=JSON.parse(localStorage.getItem(STORE)||'null')||{
  activities:{},measurements:[],sessions:[],drafts:{},energy:{}
 };
 if(!state.profile)state.profile={appName:'Meu Treino',startWeight:98,goalWeight:80,height:1.78};
+Object.values(state.workouts||{}).forEach(w=>{
+  if(w && /^Dia [123]$/.test(w.title||'')) w.title=(w.title||'').replace('Dia ','Treino ');
+});
+state.dateOverrides=state.dateOverrides||{};
+state.profile.runOnWorkoutDays = state.profile.runOnWorkoutDays!==false;
+
 if(!state.workouts)state.workouts=clone(DEFAULT_WORKOUTS); if(!state.checkins)state.checkins=clone(DEFAULT_CHECKINS); if(!state.schedule)state.schedule=clone(DEFAULT_SCHEDULE);
 ['activities','drafts','energy'].forEach(k=>state[k]=state[k]||{});['measurements','sessions'].forEach(k=>state[k]=state[k]||[]);
 let workoutDay=Object.keys(state.workouts)[0],calCursor=new Date(),selectedDate=null,timerEnd=0,timerInterval=null,editWorkoutKey=workoutDay;
@@ -92,7 +126,35 @@ function mondayOf(d){let x=new Date(d);x.setHours(12,0,0,0);x.setDate(x.getDate(
 function workoutLabel(k){let w=state.workouts[k];return w?`${w.title} • ${w.subtitle}`:'Treino'}
 function checkinById(id){return state.checkins.find(x=>x.id===id)||{id,name:id,icon:'•'}}
 function scheduleForDate(d){let idx=(d.getDay()+6)%7;return state.schedule[idx]||{kind:'rest',value:''}}
-function planLabel(s){if(s.kind==='workout')return workoutLabel(s.value);if(s.kind==='checkin'){let c=checkinById(s.value);return `${c.icon} ${c.name}`}return 'Descanso'}
+function planLabel(s){
+ if(!s)return 'Descanso';
+ if(s.kind==='workout')return workoutLabel(s.value);
+ if(s.kind==='checkin'){let c=checkinById(s.value);return `${c.icon} ${c.name}`}
+ return 'Descanso'
+}
+function planShort(s){
+ if(!s)return '—';
+ if(s.kind==='workout'){let w=state.workouts[s.value];return w?(w.title||'Treino').replace('Treino ','T'): 'T'}
+ if(s.kind==='checkin'){let c=checkinById(s.value);if(c.id==='muay')return '🥊';if(c.id==='corrida')return '🏃';return c.icon||'•'}
+ return '—'
+}
+function plannedItemsForDate(d){
+ let ds=ymd(d);
+ if(Object.prototype.hasOwnProperty.call(state.dateOverrides,ds)) return state.dateOverrides[ds];
+ let base=scheduleForDate(d);
+ if(base.kind==='workout'){
+   let arr=[];
+   if(state.profile.runOnWorkoutDays!==false) arr.push({kind:'checkin',value:'corrida',period:'morning'});
+   arr.push({kind:'workout',value:base.value,period:'evening'});
+   return arr;
+ }
+ if(base.kind==='checkin') return [{...base,period:'evening'}];
+ return [];
+}
+function plannedSummary(d){
+ let items=plannedItemsForDate(d);
+ return items.length?items.map(planShort).join(' + '):'—'
+}
 function keyA(ds,type){return ds+'|'+type}function act(ds,type){return state.activities[keyA(ds,type)]||{done:false}}function anyDone(ds){return Object.entries(state.activities).some(([k,v])=>k.startsWith(ds+'|')&&v.done)}
 function toggleActivity(ds,type){let a=act(ds,type);a.done=!a.done;state.activities[keyA(ds,type)]=a;save();showToday()}
 function setActivityMeta(ds,type,f,v){let a=act(ds,type);a[f]=v;state.activities[keyA(ds,type)]=a;save()}
@@ -101,21 +163,50 @@ function countMonth(type,date=new Date()){let p=date.getFullYear()+'-'+pad(date.
 function uniqueDoneDaysInRange(start,end){let set=new Set();Object.entries(state.activities).forEach(([k,v])=>{if(!v.done)return;let ds=k.split('|')[0];if(ds>=start&&ds<=end)set.add(ds)});return set.size}
 function latestMeasure(){return state.measurements.length?state.measurements[state.measurements.length-1]:{weight:state.profile.startWeight||98,waist:null,chest:null}}
 function modal(html){document.getElementById('sheet').innerHTML=html;document.getElementById('modal').classList.add('show')}function closeModal(){document.getElementById('modal').classList.remove('show')}
+function setNav(name){document.querySelectorAll('.bottom button[data-nav]').forEach(b=>b.classList.toggle('active',b.dataset.nav===name))}
 
-function showToday(){
- let now=new Date(),ds=ymd(now),sched=scheduleForDate(now),week=currentWeekDates();
+
+function showToday(){setNav('today');
+ let now=new Date(),ds=ymd(now),items=plannedItemsForDate(now),week=currentWeekDates();
  let weekHtml=week.map(d=>{let dd=ymd(d);return `<div class="wday ${dd===ds?'today':''} ${anyDone(dd)?'done':''}"><div class="tiny">${['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'][d.getDay()]}</div><b>${d.getDate()}</b><div>${anyDone(dd)?'●':'·'}</div></div>`}).join('');
- let planned='';
- if(sched.kind==='workout'){let done=act(ds,'musculacao').done;planned=`<div class="activity"><button class="check ${done?'done':''}" onclick="toggleActivity('${ds}','musculacao')">✓</button><div><b>🏋 ${planLabel(sched)}</b><div class="muted">${done?'Realizado':'Planejado'}</div></div><button class="action small primary" onclick="workoutDay='${sched.value}';showWorkout()">Abrir</button></div>`}
- else if(sched.kind==='checkin'){let c=checkinById(sched.value),a=act(ds,c.id);planned=`<div class="activity"><button class="check ${a.done?'done':''}" onclick="toggleActivity('${ds}','${c.id}')">✓</button><div><b>${c.icon} ${c.name}</b><div class="muted">${a.done?'Realizado':'Planejado'}</div>${c.id==='corrida'?`<div class="fields" style="margin-top:7px"><label>Km<input value="${a.km||''}" inputmode="decimal" onchange="setActivityMeta('${ds}','corrida','km',this.value)"></label><label>Min<input value="${a.min||''}" inputmode="numeric" onchange="setActivityMeta('${ds}','corrida','min',this.value)"></label></div>`:''}</div><span class="pill y">hoje</span></div>`}
- else planned=`<div class="activity"><div class="check done">○</div><div><b>Recuperação</b><div class="muted">Dia sem treino planejado</div></div><span class="pill">descanso</span></div>`;
+ let planned=items.length?items.map(it=>{
+   if(it.kind==='workout'){
+     let done=act(ds,'musculacao').done,w=state.workouts[it.value];
+     return `<div class="activity"><button class="check ${done?'done':''}" onclick="toggleActivity('${ds}','musculacao')">✓</button><div><b>🏋 ${w?w.title:'Treino'} • ${w?w.subtitle:''}</b><div class="muted">Noite • ${done?'Realizado':'Planejado'}</div></div><button class="action small primary" onclick="workoutDay='${it.value}';showWorkout()">Abrir</button></div>`;
+   } else {
+     let c=checkinById(it.value),a=act(ds,c.id);
+     return `<div class="activity"><button class="check ${a.done?'done':''}" onclick="toggleActivity('${ds}','${c.id}')">✓</button><div><b>${c.icon} ${c.name}</b><div class="muted">${it.period==='morning'?'Manhã':'Hoje'} • ${a.done?'Realizado':'Planejado'}</div>${c.id==='corrida'?`<div class="fields" style="margin-top:7px"><label>Km<input value="${a.km||''}" inputmode="decimal" onchange="setActivityMeta('${ds}','corrida','km',this.value)"></label><label>Min<input value="${a.min||''}" inputmode="numeric" onchange="setActivityMeta('${ds}','corrida','min',this.value)"></label></div>`:''}</div><span class="pill y">${it.period==='morning'?'manhã':'hoje'}</span></div>`;
+   }
+ }).join(''):`<div class="activity"><div class="check done">○</div><div><b>Recuperação</b><div class="muted">Dia sem atividade planejada</div></div><span class="pill">descanso</span></div>`;
  let quick=state.checkins.map(c=>`<button class="action ${act(ds,c.id).done?'primary':''}" onclick="quickCheck('${c.id}')">${c.icon} ${c.name}</button>`).join('');
  let doneWeek=week.filter(d=>anyDone(ymd(d))).length;
- document.getElementById('view').innerHTML=`<div class="card hero"><div class="muted">HOJE • ${now.toLocaleDateString('pt-BR')}</div><div class="metric">${planLabel(sched)}</div><div class="muted">${doneWeek} dias com atividade registrados nesta semana</div><div class="weekstrip">${weekHtml}</div></div>
- <div class="card"><div class="row"><h2>Planejado x realizado</h2><span class="pill">editável</span></div>${planned}</div>
+ let title=items.length?items.map(it=>it.kind==='workout'?(state.workouts[it.value]?.title||'Treino'):checkinById(it.value).name).join(' + '):'Recuperação';
+ document.getElementById('view').innerHTML=`<div class="card hero"><div class="muted">HOJE • ${now.toLocaleDateString('pt-BR')}</div><div class="metric home-plan">${title}</div><div class="muted">${doneWeek} dias com atividade registrados nesta semana</div><div class="weekstrip">${weekHtml}</div></div>
+ <div class="card"><div class="row"><h2>Planejado x realizado</h2><button class="action small" onclick="openRemanejar('${ds}')">Remanejar treino</button></div>${planned}</div>
  <div class="card"><h2>Check-ins rápidos</h2><div class="row wrap">${quick}</div></div>
  <div class="card"><div class="row"><h2>Resumo</h2><button class="action small" onclick="showDashboard()">Abrir Dashboard</button></div><div class="statgrid"><div class="stat"><b>${countMonth('musculacao')}</b><span>musculações no mês</span></div><div class="stat"><b>${countMonth('muay')}</b><span>Muay Thai no mês</span></div><div class="stat"><b>${countMonth('corrida')}</b><span>corridas no mês</span></div><div class="stat"><b>${latestMeasure().weight||'—'}</b><span>kg atual</span></div></div></div>`;
 }
+
+function openRemanejar(ds){
+ let d=new Date(ds+'T12:00:00'),items=plannedItemsForDate(d),wItem=items.find(x=>x.kind==='workout');
+ if(!wItem){
+   modal(`<h2>Remanejar treino</h2><p class="muted">Não há musculação planejada neste dia. Você pode escolher um treino e movê-lo para esta data pela aba Editar ou pelo calendário.</p><button class="action" style="width:100%" onclick="closeModal()">Fechar</button>`);
+   return;
+ }
+ let w=state.workouts[wItem.value];
+ modal(`<h2>Remanejar ${w?w.title:'treino'}</h2><p class="muted">A corrida da manhã será movida junto com o treino para manter sua rotina.</p><label>Nova data<input id="moveDate" type="date" min="${ds}"></label><button class="action primary" style="width:100%;margin-top:10px" onclick="applyMove('${ds}','${wItem.value}')">Mover treino + corrida</button><button class="action ghost" style="width:100%;margin-top:8px" onclick="closeModal()">Cancelar</button>`);
+}
+function applyMove(fromDs,workoutKey){
+ let to=document.getElementById('moveDate').value;
+ if(!to||to===fromDs)return;
+ state.dateOverrides[fromDs]=[];
+ state.dateOverrides[to]=[
+   ...(state.profile.runOnWorkoutDays!==false?[{kind:'checkin',value:'corrida',period:'morning'}]:[]),
+   {kind:'workout',value:workoutKey,period:'evening'}
+ ];
+ save();closeModal();showCalendar();
+}
+
 function quickCheck(id){let ds=ymd(),a=act(ds,id);a.done=!a.done;state.activities[keyA(ds,id)]=a;save();showToday()}
 
 function draftKey(day){return ymd()+'|'+day}function getDraft(day){let k=draftKey(day);if(!state.drafts[k])state.drafts[k]={};return state.drafts[k]}
@@ -124,14 +215,14 @@ function lastExerciseLog(name){for(let i=state.sessions.length-1;i>=0;i--){let e
 function prExercise(name){let vals=[];state.sessions.forEach(s=>s.exercises.forEach(e=>{if((e.name===name||e.originalName===name)&&Number(e.kg)>0)vals.push(Number(e.kg))}));return vals.length?Math.max(...vals):null}
 function visualLabel(v){let map={hack:'HACK',legpress:'LEG PRESS',extension:'EXTENSORA',curl:'FLEXORA',barbell:'BARRA / HALTER',calf:'PANTURR.',ab:'ABDOMINAL',roman:'CADEIRA ROMANA',bench:'SUPINO',incline:'SUPINO INCLIN.',pecdeck:'PECK DECK',shoulder:'SHOULDER PRESS',lateral:'ELEVAÇÃO LATERAL',cable:'POLIA',cableab:'POLIA ALTA',bulgarian:'BANCO + HALTER',latpull:'PUXADA ALTA',row:'REMADA',reversepec:'PECK DECK REVERSO',plank:'SOLO'};return map[v]||'EXERCÍCIO'}
 function workoutTabs(){return `<div class="tabs">${Object.entries(state.workouts).map(([k,d])=>`<button class="tab ${k===workoutDay?'active':''}" onclick="workoutDay='${k}';showWorkout()">${d.title}<br><span class="tiny">${d.subtitle}</span></button>`).join('')}</div>`}
-function showWorkout(){
+function showWorkout(){setNav('workout');
  let d=state.workouts[workoutDay];if(!d){workoutDay=Object.keys(state.workouts)[0];d=state.workouts[workoutDay]}let total=0,done=0;
  let cards=d.exercises.map((ex,idx)=>{let x=getExDraft(ex);total+=ex.sets;done+=x.sets.filter(Boolean).length;let last=lastExerciseLog(ex.name),pr=prExercise(ex.name);
  return `<div class="card"><div class="exercise-top"><div><h2>${x.substitute||ex.name}${x.substitute?` <span class="tiny">(no lugar de ${ex.name})</span>`:''}</h2><div class="muted">${ex.sets} séries • ${ex.repRange} • ${ex.muscles}</div><div class="historyline">${last?`Último: <b>${last.kg||'—'} kg</b> • ${last.reps||'—'} reps`:'Sem histórico'} ${pr?` • PR: <b class="yellow">${pr} kg</b>`:''}</div></div><div class="machine-art">${visualLabel(ex.visual)}</div></div>
  <div class="sets">${x.sets.map((v,i)=>`<button class="set ${v?'done':''} ${x.skipped?'skip':''}" onclick="toggleSet(${idx},${i})">${i+1}</button>`).join('')}</div>
  <div class="fields"><label>Carga (kg)<input value="${x.kg}" inputmode="decimal" onchange="draftField(${idx},'kg',this.value)"></label><label>Reps<input value="${x.reps}" inputmode="numeric" onchange="draftField(${idx},'reps',this.value)"></label></div>
- <div class="row wrap" style="margin-top:9px"><button class="action small primary" onclick="startTimer(${ex.rest||90})">⏱ ${ex.rest||90}s</button><button class="action small" onclick="openExercise(${idx})">Como fazer</button><button class="action small" onclick="openReference(${idx})">▶ Referência</button><button class="action small" onclick="openAlternatives(${idx})">Substituir</button><button class="action small ${x.skipped?'danger':''}" onclick="toggleSkip(${idx})">${x.skipped?'Desfazer pulo':'Pular'}</button></div>
- <label style="margin-top:9px">Observação<textarea onchange="draftField(${idx},'note',this.value)" placeholder="Máquina ocupada, desconforto, carga leve...">${x.note||''}</textarea></label></div>`}).join('');
+ <div class="exercise-actions" style="margin-top:9px"><button class="action small primary" onclick="startTimer(${ex.rest||90})">⏱ ${ex.rest||90}s</button><button class="action small" onclick="openExercise(${idx})">Como fazer</button><button class="action small" onclick="openReference(${idx})">▶ Referência</button><button class="action small" onclick="openAlternatives(${idx})">Substituir</button><button class="action small ${x.skipped?'danger':''}" onclick="toggleSkip(${idx})">${x.skipped?'Desfazer pulo':'Pular'}</button></div>
+ <details style="margin-top:9px"><summary>Observação</summary><textarea onchange="draftField(${idx},'note',this.value)" placeholder="Máquina ocupada, desconforto, carga leve...">${x.note||''}</textarea></details></div>`}).join('');
  document.getElementById('view').innerHTML=`${workoutTabs()}<div class="card hero"><div class="row"><div><h2>${d.subtitle}</h2><div class="muted">${done}/${total} séries concluídas</div></div><div class="metric-sm yellow">${Math.round(done/Math.max(total,1)*100)}%</div></div><div class="progress"><div class="bar" style="width:${done/Math.max(total,1)*100}%"></div></div></div>${cards}
  <div class="card"><h2>Concluir treino</h2><div class="row wrap"><button class="action" onclick="setEnergy('Ruim')">Ruim</button><button class="action" onclick="setEnergy('Normal')">Normal</button><button class="action" onclick="setEnergy('Ótima')">Ótima</button></div><label style="margin-top:9px">Nota geral<textarea id="sessionNote"></textarea></label><button class="action primary" style="width:100%;margin-top:9px" onclick="finishWorkout()">Salvar treino</button></div>`;
 }
@@ -158,7 +249,7 @@ function lineSVG(data,label,goal=null){
 }
 function activityBars(){let d=weeklyActivityData(),max=Math.max(1,...d.map(x=>x.musculacao+x.muay+x.corrida));return `<div class="bars">${d.map(x=>{let total=x.musculacao+x.muay+x.corrida;let scale=120/max;return `<div class="barcol"><div class="barseg r" style="height:${x.corrida*scale}px" title="Corrida ${x.corrida}"></div><div class="barseg t" style="height:${x.muay*scale}px" title="Muay ${x.muay}"></div><div class="barseg m" style="height:${x.musculacao*scale}px" title="Musculação ${x.musculacao}"></div><div class="barlabel">${x.label}<br>${total}</div></div>`}).join('')}</div><div class="notice"><span class="dot m"></span> musculação &nbsp; <span class="dot t"></span> Muay Thai &nbsp; <span class="dot r"></span> corrida</div>`}
 function topPRs(){let map={};state.sessions.forEach(s=>s.exercises.forEach(e=>{let kg=Number(e.kg)||0;if(kg>0)map[e.originalName||e.name]=Math.max(map[e.originalName||e.name]||0,kg)}));return Object.entries(map).sort((a,b)=>b[1]-a[1]).slice(0,5)}
-function showDashboard(){
+function showDashboard(){setNav('dash');
  let l=latestMeasure(),start=Number(state.profile.startWeight)||98,goal=Number(state.profile.goalWeight)||80,current=Number(l.weight)||start,pct=Math.max(0,Math.min(100,(start-current)/(start-goal)*100)),now=new Date(),monthMus=countMonth('musculacao'),monthMuay=countMonth('muay'),monthRun=countMonth('corrida'),week=currentWeekDates(),weekDone=week.filter(d=>anyDone(ymd(d))).length;
  let weights=state.measurements.filter(x=>x.weight).slice(-12).map(x=>({date:x.date,value:x.weight})),waists=state.measurements.filter(x=>x.waist).slice(-12).map(x=>({date:x.date,value:x.waist})),vol=volumeBySession();
  document.getElementById('view').innerHTML=`<div class="card hero"><div class="row"><div><div class="muted">PROGRESSO DE PESO</div><div class="metric">${current} kg</div></div><div><div class="muted">META</div><div class="metric">${goal} kg</div></div></div><div class="progress"><div class="bar" style="width:${pct}%"></div></div><div class="muted" style="margin-top:6px">${pct.toFixed(0)}% do caminho • faltam ${Math.max(0,current-goal).toFixed(1)} kg</div></div>
@@ -170,26 +261,26 @@ function showDashboard(){
  <div class="card"><h2>Melhores cargas registradas</h2>${topPRs().map(([n,v])=>`<div class="row" style="padding:8px 0;border-bottom:1px solid #292929"><span>${n}</span><b class="yellow">${v} kg</b></div>`).join('')||'<div class="muted">Ainda sem cargas registradas.</div>'}</div>`;
 }
 
-function showCalendar(){
+function showCalendar(){setNav('calendar');
  let y=calCursor.getFullYear(),m=calCursor.getMonth(),first=new Date(y,m,1),last=new Date(y,m+1,0),start=(first.getDay()+6)%7,c='';for(let i=0;i<start;i++)c+='<div class="cell" style="opacity:.15"></div>';
- for(let n=1;n<=last.getDate();n++){let d=new Date(y,m,n),ds=ymd(d),types=Object.entries(state.activities).filter(([k,v])=>k.startsWith(ds+'|')&&v.done).map(([k])=>k.split('|')[1]),sched=scheduleForDate(d);let dots=types.map(t=>`<span class="dot ${t==='musculacao'?'m':t==='corrida'?'r':'t'}"></span>`).join('');c+=`<div class="cell ${ds===ymd()?'today':''} ${selectedDate===ds?'selected':''}" onclick="selectedDate='${ds}';showCalendar()"><b>${n}</b><div class="planmark">${planLabel(sched).split(' • ')[0]}</div><div class="dots">${dots}</div></div>`}
- let det='';if(selectedDate){let d=new Date(selectedDate+'T12:00:00'),sched=scheduleForDate(d),real=Object.entries(state.activities).filter(([k,v])=>k.startsWith(selectedDate+'|')&&v.done).map(([k])=>k.split('|')[1]);det=`<div class="card"><h2>${brDate(selectedDate)}</h2><div class="altbox"><b>Planejado</b><br>${planLabel(sched)}</div><div class="altbox"><b>Realizado</b><br>${real.length?real.map(t=>checkinById(t).name||t).join(', '):'Nada registrado'}</div></div>`}
+ for(let n=1;n<=last.getDate();n++){let d=new Date(y,m,n),ds=ymd(d),types=Object.entries(state.activities).filter(([k,v])=>k.startsWith(ds+'|')&&v.done).map(([k])=>k.split('|')[1]),sched=scheduleForDate(d);let dots=types.map(t=>`<span class="dot ${t==='musculacao'?'m':t==='corrida'?'r':'t'}"></span>`).join('');c+=`<div class="cell ${ds===ymd()?'today':''} ${selectedDate===ds?'selected':''}" onclick="selectedDate='${ds}';showCalendar()"><b>${n}</b><div class="planmark">${plannedSummary(d)}</div><div class="dots">${dots}</div></div>`}
+ let det='';if(selectedDate){let d=new Date(selectedDate+'T12:00:00'),sched=scheduleForDate(d),plans=plannedItemsForDate(d),real=Object.entries(state.activities).filter(([k,v])=>k.startsWith(selectedDate+'|')&&v.done).map(([k])=>k.split('|')[1]);det=`<div class="card"><h2>${brDate(selectedDate)}</h2><div class="altbox"><b>Planejado</b><br>${plans.length?plans.map(planLabel).join(' + '):'Descanso'}</div>${plans.some(x=>x.kind==='workout')?`<button class="action small" style="margin-top:8px" onclick="openRemanejar('${selectedDate}')">Remanejar treino</button>`:''}<div class="altbox"><b>Realizado</b><br>${real.length?real.map(t=>checkinById(t).name||t).join(', '):'Nada registrado'}</div></div>`}
  document.getElementById('view').innerHTML=`<div class="card"><div class="row"><button class="action small" onclick="calCursor=new Date(${y},${m-1},1);selectedDate=null;showCalendar()">‹</button><h2>${calCursor.toLocaleDateString('pt-BR',{month:'long',year:'numeric'})}</h2><button class="action small" onclick="calCursor=new Date(${y},${m+1},1);selectedDate=null;showCalendar()">›</button></div><div class="calendar">${['Seg','Ter','Qua','Qui','Sex','Sáb','Dom'].map(x=>`<div class="calname">${x}</div>`).join('')}${c}</div><p class="notice">Texto = planejado • pontos = realizado.</p></div>${det}`;
 }
 
 function addMeasurement(){let date=document.getElementById('mdate').value||ymd(),weight=Number(document.getElementById('mweight').value)||null,waist=Number(document.getElementById('mwaist').value)||null,chest=Number(document.getElementById('mchest').value)||null;if(!weight&&!waist&&!chest)return;state.measurements.push({date,weight,waist,chest});state.measurements.sort((a,b)=>a.date.localeCompare(b.date));save();showProgress()}
-function showProgress(){let l=latestMeasure(),start=state.profile.startWeight||98,goal=state.profile.goalWeight||80;document.getElementById('view').innerHTML=`<div class="card hero"><div class="row"><div><div class="muted">ATUAL</div><div class="metric">${l.weight||start} kg</div></div><div><div class="muted">META</div><div class="metric">${goal} kg</div></div></div></div>
- <div class="card"><h2>Nova medição</h2><div class="grid2"><label>Data<input id="mdate" type="date" value="${ymd()}"></label><label>Peso (kg)<input id="mweight" inputmode="decimal"></label><label>Cintura (cm)<input id="mwaist" inputmode="decimal"></label><label>Peito (cm)<input id="mchest" inputmode="decimal"></label></div><button class="action primary" style="width:100%;margin-top:9px" onclick="addMeasurement()">Salvar medição</button></div>
+function showProgress(){setNav('progress');let l=latestMeasure(),start=state.profile.startWeight||98,goal=state.profile.goalWeight||80;document.getElementById('view').innerHTML=`<div class="card hero"><div class="row"><div><div class="muted">ATUAL</div><div class="metric">${l.weight||start} kg</div></div><div><div class="muted">META</div><div class="metric">${goal} kg</div></div></div></div>
+ <div class="card"><h2>Nova medição</h2><div class="grid2 measure-grid"><label>Data<input id="mdate" type="date" value="${ymd()}"></label><label>Peso (kg)<input id="mweight" inputmode="decimal"></label><label>Cintura (cm)<input id="mwaist" inputmode="decimal"></label><label>Peito (cm)<input id="mchest" inputmode="decimal"></label></div><button class="action primary" style="width:100%;margin-top:9px" onclick="addMeasurement()">Salvar medição</button></div>
  <div class="card"><h2>Histórico</h2>${state.measurements.slice().reverse().map((x,i)=>`<div class="editrow"><div><b>${brDate(x.date)}</b><div class="muted">${x.weight?x.weight+' kg ':''}${x.waist?'• cintura '+x.waist+' cm ':''}${x.chest?'• peito '+x.chest+' cm':''}</div></div><button class="action small danger" onclick="deleteMeasurement(${state.measurements.length-1-i})">Excluir</button></div>`).join('')||'<div class="muted">Nenhuma medição.</div>'}</div>`}
 function deleteMeasurement(i){state.measurements.splice(i,1);save();showProgress()}
 
-function showEdit(){
+function showEdit(){setNav('edit');
  let opts=`<option value="rest:">Descanso</option>`+Object.keys(state.workouts).map(k=>`<option value="workout:${k}">${workoutLabel(k)}</option>`).join('')+state.checkins.map(c=>`<option value="checkin:${c.id}">${c.icon} ${c.name}</option>`).join('');
  let days=['Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'];let sched=state.schedule.map((s,i)=>`<div class="schedrow"><b>${days[i]}</b><select onchange="changeSchedule(${i},this.value)">${opts.replace(`value="${s.kind}:${s.value}"`,`value="${s.kind}:${s.value}" selected`)}</select></div>`).join('');
  let cis=state.checkins.map((c,i)=>`<div class="checktype"><div><b>${c.icon} ${c.name}</b><div class="tiny">${c.id}</div></div><div><button class="action small" onclick="editCheckin(${i})">Editar</button> <button class="action small danger" onclick="deleteCheckin(${i})">Excluir</button></div></div>`).join('');
  if(!state.workouts[editWorkoutKey])editWorkoutKey=Object.keys(state.workouts)[0];let w=state.workouts[editWorkoutKey],wTabs=Object.keys(state.workouts).map(k=>`<button class="tab ${k===editWorkoutKey?'active':''}" onclick="editWorkoutKey='${k}';showEdit()">${state.workouts[k].title}</button>`).join(''),exs=w.exercises.map((e,i)=>`<div class="editrow"><div><b>${e.name}</b><div class="muted">${e.sets} × ${e.repRange} • ${e.rest||90}s</div></div><div class="dragbtns"><button class="action small" onclick="moveEx(${i},-1)">↑</button><button class="action small" onclick="moveEx(${i},1)">↓</button><button class="action small" onclick="editExercise(${i})">Editar</button><button class="action small danger" onclick="deleteExercise(${i})">×</button></div></div>`).join('');
  document.getElementById('view').innerHTML=`<div class="card"><div class="row"><h2>Perfil e meta</h2><span class="pill y">salva automaticamente</span></div><div class="grid2"><label>Nome do app<input value="${state.profile.appName||'Meu Treino'}" onchange="state.profile.appName=this.value;save();showEdit()"></label><label>Altura (m)<input value="${state.profile.height||1.78}" inputmode="decimal" onchange="state.profile.height=Number(this.value)||1.78;save()"></label><label>Peso inicial<input value="${state.profile.startWeight||98}" inputmode="decimal" onchange="state.profile.startWeight=Number(this.value)||98;save()"></label><label>Meta de peso<input value="${state.profile.goalWeight||80}" inputmode="decimal" onchange="state.profile.goalWeight=Number(this.value)||80;save()"></label></div></div>
- <div class="card"><h2>Agenda semanal</h2><p class="muted">Defina o planejado. O calendário continua mostrando separadamente o que foi realmente feito.</p>${sched}</div>
+ <div class="card"><h2>Agenda semanal</h2><p class="muted">Defina onde ficam Treino 1, 2 e 3. Se precisar mudar apenas uma semana, use “Remanejar treino” no Hoje ou Calendário.</p><label style="margin-bottom:10px"><input type="checkbox" style="width:auto;margin-right:8px" ${state.profile.runOnWorkoutDays!==false?'checked':''} onchange="state.profile.runOnWorkoutDays=this.checked;save();showEdit()"> Planejar corrida de manhã em todos os dias de musculação</label>${sched}</div>
  <div class="card"><div class="row"><h2>Tipos de check-in</h2><button class="action small primary" onclick="addCheckin()">+ Adicionar</button></div>${cis}</div>
  <div class="card"><div class="row"><h2>Treinos</h2><div><button class="action small" onclick="addWorkout()">+ Novo</button> <button class="action small" onclick="duplicateWorkout()">Duplicar</button></div></div><div class="tabs">${wTabs}</div><div class="grid2"><label>Nome<input value="${w.title}" onchange="wField('title',this.value)"></label><label>Descrição<input value="${w.subtitle}" onchange="wField('subtitle',this.value)"></label></div><div style="margin-top:10px">${exs}</div><button class="action primary" style="width:100%;margin-top:9px" onclick="addExercise()">+ Adicionar exercício</button></div>
  <div class="card"><h2>Manutenção</h2><button class="action" onclick="restoreDefaults()">Restaurar treino padrão</button></div>`;
